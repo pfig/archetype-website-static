@@ -50,8 +50,8 @@
   </distributionManagement>
   
   <scm>
-    <connection>scm:git:git@github.com:pfig/maven-archetype-website-basic.git</connection>
-    <developerConnection>scm:git:git@github.com:pfig/maven-archetype-website-basic.git</developerConnection>
-    <url>https://github.com/pfig/maven-archetype-website-basic</url>
+    <connection>scm:git:git@github.com:pfig/archetype-website-static.git</connection>
+    <developerConnection>scm:git:git@github.com:pfig/archetype-website-static.git</developerConnection>
+    <url>https://github.com/pfig/archetype-website-static</url>
   </scm>
 </project>
