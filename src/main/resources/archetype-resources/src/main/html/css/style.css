@@ -1,0 +1,20 @@
+@import url("/css/reset.css");
+body {
+  font-size: 14px;
+  background-image: transparent;
+  color: #fff;
+  font-family: Helvetica, "Bitsream Vera Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+a,a:active,a:link,a:visited,a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+#content {
+  position: absolute;
+}
+#footer {
+  font-size: xx-small;
+}

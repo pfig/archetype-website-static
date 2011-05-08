@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <packaging>pom</packaging>
+
+  <version>${version}</version>
+  <name>${website-name}</name>
+  <description>${website-description}</description>
+  <url>${website-url}</url>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <organization>
+    <name>pedrofigueiredo.org</name>
+    <url>http://pedrofigueiredo.org/</name>
+  </organization>
+  
+  <developers>
+    <developer>
+      <id>pfig</id>
+      <name>Pedro Figueiredo</name>
+      <email>me@pedrofigueiredo.org</name>
+      <organization>pedrofigueiredo.org</organization>
+      <organizationUrl>http://pedrofigueiredo.org</organizationUrl>
+    </developer>
+  </developers>
+  
+  <build>
+    <finalName>${website-id}</finalName>
+    
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/assemble.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.0</version>
+      </plugin>
+    </plugins>
+  </build>
+    
+  <distributionManagement>
+    <repository>
+      <id>pfig-releases</id>
+      <name>Releases @ pedrofigueiredo.org</name>
+      <url>http://maven.pedrofigueiredo.org/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>pfig-snapshots</id>
+      <name>Snapshots @ pedrofigueiredo.org</name>
+      <url>http://maven.pedrofigueiredo.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:git@github.com:pfig/${website-id}.git</connection>
+    <developerConnection>scm:git:git@github.com:pfig/${website-id}.git</developerConnection>
+    <url>https://github.com/pfig/${website-id}</url>
+  </scm>
+</project>
