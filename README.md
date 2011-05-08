@@ -42,6 +42,8 @@ website-id will be inserted in the generated POM in the &lt;scm> section, (which
 
 You need to adjust this in the generated POM, or better yet change the archetype's template POM to use whatever you use for version control (and while you're at it, also do the same in the archetype's POM for SCM and artefact repository; if you don't want to run your own Nexus or Archiva, [here's a post about using GitHub as a Maven artefact repository][3]).
 
+When you've finished your website, 'mvn package' will create a tar.gz of it in the target directory. If you add directories other than my default ones, you'll need to adjust the assembly file accordingly.
+
 Enjoy!
 
 Other
