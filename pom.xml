@@ -4,7 +4,7 @@
   
   <groupId>org.pedrofigueiredo.archetypes</groupId>
   <artifactId>website-static-archetype</artifactId>
-  <version>0.1.0.04</version>
+  <version>0.2.0.01-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
   
   <name>website-static-archetype</name>
